@@ -56,20 +56,48 @@ This project is a custom implementation of the popular game **Doodle Jump**. The
   - Players compete to avoid falling off the screen.
   - The game view follows the player with the highest score.
 
-## Technical Information
-- **Screen Resolution:** 540 x 960 pixels.
-- **Game Objects:**
-  - Platforms: 120 x 30 pixels.
-  - Doodle: 80 x 80 pixels.
-  - Items: Dimensions vary based on type.
+## Game Description
 
-## How to Run
-1. Clone this repository to your local machine.
-2. Follow the compilation and execution steps in the `README` file to launch the game.
+The game features two modes: single-player mode and multiplayer mode. After entering the main screen, clicking "Play" will start the single-player mode, while clicking "Multiplayer" will launch the multiplayer mode. 
 
-## Future Improvements
-- Add more advanced obstacles like black holes.
-- Improve item variety and effects.
-- Implement online multiplayer functionality.
+- In **single-player mode**, the game ends when the player's HP reaches zero or the Doodle touches the bottom of the screen.
+- In **multiplayer mode**, there are no items or monsters. The game ends when one of the Doodles touches the bottom of the screen.
+
+## Controls
+
+- **Single-player Mode:**  
+  Use the left and right arrow keys on the keyboard to move the Doodle and use the mouse to aim and shoot bullets.
+
+- **Multiplayer Mode:**  
+  - Player 1 (Yellow Doodle): Use the left and right arrow keys to control movement.
+  - Player 2 (Blue Doodle): Use the "A" (left) and "D" (right) keys to control movement.
+
+- To **pause** the game, press the `Esc` key. Then, click "Resume" to continue the game or "Menu" to return to the main screen.
+
+- When the game is over, click "Menu" to return to the main screen.
+
+
+## How to execute
+### Terminal 1
+1. Navigate to the project directory
+2. Generate the Makefile using qmake
+   ```bash
+   qmake-qt5
+3. Compile the project
+    ```bash
+   make
+### Terminal 2 
+1. Start the X Window System
+    ```bash
+   startxwin
+### Go to cygwin Folder
+1. Run /bin/pulseaudio.exe
+### Back to Terminal 1
+1. Set the display environment variable
+   ```bash
+   export DISPLAY=:0.0
+2. Run the Big Two game executable
+   ```bash
+   ./big_two
 
 Explore the world of **Doodle Jump** with this fun and challenging project!
